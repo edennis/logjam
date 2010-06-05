@@ -21,7 +21,7 @@ Event.observe(window, 'load', function() {show_description()});
 
 <div id='left' class='clear-left'>
   <div id='filter'>
-    <% form_tag({:action => :index}, :method => :get, :id => 'filter-form') do -%>
+    <%= form_tag({:action => :index}, :method => :get, :id => 'filter-form') do -%>
       <fieldset>
         <legend>LogJam for Rails</legend>
         <p class='filter-widget'>

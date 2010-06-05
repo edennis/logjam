@@ -2,7 +2,7 @@ class ControllerActionsController < ApplicationController
   # GET /controller_actions
   # GET /controller_actions.xml
   before_filter :redirect_to_clean_url
-  if RAILS_ENV=="development"
+  if Rails.env =="development"
     before_filter :print_params
   end
 

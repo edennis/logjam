@@ -1,3 +1,10 @@
+# Logjam::Application.routes.draw do
+#   match ':controller/:action' => '#index', :as => :auto_complete, :via => 'get', :constraints => 'action(?-mix:auto_complete_for_\S+)'
+#   match ':year/:month/:day/:action' => 'controller_actions#index', :constraints => 'day(?-mix:\d\d)month(?-mix:\d\d)year(?-mix:\d\d\d\d)'
+#   match '/' => 'controller_actions#index'
+#   match '/:controller(/:action(/:id))'
+# end
+
 ActionController::Routing::Routes.draw do |map|
   map.auto_complete ':controller/:action', 
                     :requirements => { :action => /auto_complete_for_\S+/ },

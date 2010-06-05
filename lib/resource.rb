@@ -14,7 +14,7 @@ class Resource
 
     def resource_map
       @resource_map ||= begin
-        hash = YAML.load_file(RAILS_ROOT + '/config/logjam.yml')
+        hash = YAML.load_file("#{Rails.root}/config/logjam.yml")
         hash.merge(hash){|k, v| v||[]} # convert nils to []
       end
     end
