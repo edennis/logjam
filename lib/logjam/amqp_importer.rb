@@ -150,10 +150,12 @@ module Logjam
 
     def importer_queue_options
       {
-        :auto_delete => true,
+        :durable => true,
         :arguments => {
-          # reap messages after 5 minutes
-          "x-message-ttl" => 5 * 60 * 1000
+          # reap messages after 1 minute
+          "x-message-ttl" => 1 * 60 * 1000,
+          # delete the queue after 5 minutes
+          "x-expires" =>  5 * 60 * 1000
         }
       }
     end
